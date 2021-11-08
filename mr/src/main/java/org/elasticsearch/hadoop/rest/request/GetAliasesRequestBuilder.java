@@ -54,6 +54,7 @@ public class GetAliasesRequestBuilder extends RequestBuilder<GetAliasesRequestBu
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public Response execute() {
         StringBuilder path = new StringBuilder();
         if (indices.size() > 0) {
