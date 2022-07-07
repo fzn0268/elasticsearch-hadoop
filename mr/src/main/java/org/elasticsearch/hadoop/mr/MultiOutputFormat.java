@@ -47,7 +47,6 @@ public class MultiOutputFormat extends OutputFormat implements org.apache.hadoop
         }
 
         @Override
-        @SuppressWarnings("unchecked")
         public void write(Object key, Object value) throws IOException, InterruptedException {
             for (RecordWriter writer : writers) {
                 writer.write(key, value);
@@ -79,7 +78,6 @@ public class MultiOutputFormat extends OutputFormat implements org.apache.hadoop
 
 
         @Override
-        @SuppressWarnings("unchecked")
         public void write(Object key, Object value) throws IOException {
             for (org.apache.hadoop.mapred.RecordWriter writer : writers) {
                 writer.write(key, value);

@@ -70,7 +70,6 @@ public class IndicesAliases {
      *
      * @param resp JSON Response in the form of a Java Map
      */
-    @SuppressWarnings("unchecked")
     public static IndicesAliases parse(Map<String, Object> resp) {
         final Map<String, Map<String, Alias> > indices = new HashMap<String, Map<String, Alias> > ();
         for (Map.Entry<String, Object> index : resp.entrySet()) {
