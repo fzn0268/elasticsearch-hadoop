@@ -22,11 +22,14 @@ if (snapshot) {
 }
 
 repositories {
-    jcenter()
-    mavenCentral()
+//    jcenter()
+    maven { url 'https://maven.aliyun.com/repository/jcenter' }
+//    mavenCentral()
+    maven { url 'https://maven.aliyun.com/repository/central' }
 
     // For resolving propdeps (provided/optional dependencies)
-    maven { url 'https://repo.spring.io/plugins-release-local' }
+    maven { url 'https://maven.aliyun.com/repository/spring-plugin' }
+    maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
 
     // For Elasticsearch snapshots.
     if (localRepo) {

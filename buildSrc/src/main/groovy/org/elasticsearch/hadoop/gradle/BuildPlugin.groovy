@@ -169,10 +169,11 @@ class BuildPlugin implements Plugin<Project>  {
      * @param project to be configured
      */
     private static void configureRepositories(Project project) {
-        project.repositories.mavenCentral()
-        project.repositories.maven { url "https://conjars.org/repo" }
-        project.repositories.maven { url "https://clojars.org/repo" }
-        project.repositories.maven { url 'https://repo.spring.io/plugins-release' }
+//        project.repositories.mavenCentral()
+        project.repositories.maven { url 'https://maven.aliyun.com/repository/central' }
+        project.repositories.maven { url "https://conjars.wensel.net/repo" }
+        project.repositories.maven { url "https://conjars.wensel.net/repo" }
+        project.repositories.maven { url 'https://maven.aliyun.com/repository/spring-plugin' }
 
         // Elastic artifacts
         project.repositories.maven { url "https://artifacts.elastic.co/maven/" } // default

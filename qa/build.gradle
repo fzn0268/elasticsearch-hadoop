@@ -33,8 +33,11 @@ subprojects {
     buildscript {
         boolean localRepo = project.getProperties().containsKey("localRepo")
         repositories {
-            jcenter()
-            mavenCentral()
+//            jcenter()
+            maven { url 'https://maven.aliyun.com/repository/jcenter' }
+//            mavenCentral()
+            maven { url 'https://maven.aliyun.com/repository/central' }
+            maven { url 'https://conjars.wensel.net/repo' }
             if (localRepo) {
                 // For some reason the root dirs all point to the buildSrc folder. The local Repo will be one above that.
                 flatDir { dirs new File(project.rootProject.rootDir, "localRepo") }
